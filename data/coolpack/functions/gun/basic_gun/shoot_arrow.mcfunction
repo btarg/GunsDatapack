@@ -17,6 +17,8 @@ execute anchored eyes positioned ^ ^ ^ if score @s guntype matches 2 run summon 
 # DMR semi auto rounds
 execute anchored eyes positioned ^ ^ ^ if score @s guntype matches 3 run summon minecraft:arrow ~ ~ ~ {damage:3d,life:1199s,Color:-1,Tags:["ammo", "fast_ammo"],Silent:1}
 
+execute as @s at @s run data modify storage arrow_owner_uuid uuid set from entity @s UUID
+execute as @e[type=minecraft:arrow,tag=ammo] at @s run data modify entity @s Owner set from storage arrow_owner_uuid uuid
 
 playsound minecraft:entity.firework_rocket.blast_far player @a ~ ~ ~ 1 1
 

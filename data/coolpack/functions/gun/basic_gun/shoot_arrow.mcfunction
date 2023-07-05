@@ -24,9 +24,9 @@ execute as @e[type=minecraft:arrow,tag=fast_ammo] at @s run execute store result
 execute as @e[type=minecraft:arrow,tag=fast_ammo] at @s run execute store result entity @s Motion[1] double -0.025 run scoreboard players get @p pos_y
 execute as @e[type=minecraft:arrow,tag=fast_ammo] at @s run execute store result entity @s Motion[2] double -0.025 run scoreboard players get @p pos_z
 
-execute as @e[type=minecraft:arrow,tag=slow_ammo] at @s run execute store result entity @s Motion[0] double -0.0075 run scoreboard players get @p pos_x
-execute as @e[type=minecraft:arrow,tag=slow_ammo] at @s run execute store result entity @s Motion[1] double -0.0075 run scoreboard players get @p pos_y
-execute as @e[type=minecraft:arrow,tag=slow_ammo] at @s run execute store result entity @s Motion[2] double -0.0075 run scoreboard players get @p pos_z
+execute as @e[type=minecraft:arrow,tag=slow_ammo] at @s run execute store result entity @s Motion[0] double -0.01 run scoreboard players get @p pos_x
+execute as @e[type=minecraft:arrow,tag=slow_ammo] at @s run execute store result entity @s Motion[1] double -0.01 run scoreboard players get @p pos_y
+execute as @e[type=minecraft:arrow,tag=slow_ammo] at @s run execute store result entity @s Motion[2] double -0.01 run scoreboard players get @p pos_z
 
 execute anchored eyes run particle minecraft:flame ^-0.4 ^ ^0.7 0 0 0 0 1 normal
 

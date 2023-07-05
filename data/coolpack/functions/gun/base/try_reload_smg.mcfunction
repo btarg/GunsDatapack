@@ -1,4 +1,5 @@
 # store the amount of ammo in a temp scoreboard
+execute as @s at @s run say trying to reload smg...
 execute as @s store result score @s smg_ammo_in_inventory run clear @s minecraft:arrow{refill_type:refill_smg} 0
 
 # get how many bullets we need to fill in the mag

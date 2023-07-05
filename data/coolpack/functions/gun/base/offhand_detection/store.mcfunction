@@ -1,0 +1,1 @@
+data modify storage gun offhand set from entity @s Inventory[{Slot:-106b}]

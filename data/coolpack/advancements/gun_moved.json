@@ -1,0 +1,18 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:inventory_changed",
+        "conditions": {
+          "items": [
+            {
+              "nbt": "{gun:1b}"
+            }
+          ]
+        }
+      }
+    },
+    "rewards": {
+      "function": "coolpack:gun/gun_moved"
+    }
+  }
+  

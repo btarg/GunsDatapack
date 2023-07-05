@@ -1,0 +1,2 @@
+execute as @s at @s if score @s current_smg_ammo matches 1.. run function coolpack:gun/basic_gun/shoot_arrow
+execute as @s at @s if score @s current_smg_ammo matches 0 run playsound minecraft:block.dispenser.dispense player @a ~ ~ ~ 1 1

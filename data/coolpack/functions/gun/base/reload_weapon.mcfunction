@@ -1,0 +1,2 @@
+execute as @s at @s if score @s current_ammo_type matches 1 run function coolpack:gun/base/try_reload_smg
+execute as @s at @s if score @s current_ammo_type matches 2 run function coolpack:gun/base/try_reload_rifle

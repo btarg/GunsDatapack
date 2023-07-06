@@ -3,3 +3,4 @@ scoreboard players operation @s rifle_ammo_needed = @s current_mag_max_ammo
 scoreboard players operation @s rifle_ammo_needed -= @s current_rifle_ammo
 
 execute as @s if score @s rifle_ammo_in_inventory matches 1.. run function coolpack:gun/base/reloading/recursive_clear_rifle
+function coolpack:gun/base/update_ammo

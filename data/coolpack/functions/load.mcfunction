@@ -17,6 +17,10 @@ scoreboard objectives add reload_timer dummy
 
 scoreboard objectives add current_rifle_ammo dummy
 scoreboard objectives add current_smg_ammo dummy
+
+scoreboard objectives add nbt_rifle_ammo dummy
+scoreboard objectives add nbt_smg_ammo dummy
+
 scoreboard objectives add current_mag_max_ammo dummy
 scoreboard objectives add current_fire_delay dummy
 

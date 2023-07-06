@@ -1,0 +1,14 @@
+{
+  "function": "minecraft:copy_nbt",
+  "source": {
+    "type": "minecraft:storage",
+    "source": "minecraft:main"
+  },
+  "ops": [
+    {
+      "source": "gun.tag.ammo",
+      "target": "ammo",
+      "op": "replace"
+    }
+  ]
+}

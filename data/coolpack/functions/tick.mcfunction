@@ -1,6 +1,5 @@
 # fire warped fungus based firearms
 execute as @a[nbt={SelectedItem:{tag:{gun:1b}}}] if score @s used_fungus_gun matches 1.. run function coolpack:gun/fungus_gun
-execute as @a[nbt={SelectedItem:{tag:{gun:1b}}}] if score @s spyglass matches 1.. run function coolpack:gun/fungus_gun
 
 
 kill @e[type=minecraft:eye_of_ender,nbt={Item:{tag:{gun:1b}}}]

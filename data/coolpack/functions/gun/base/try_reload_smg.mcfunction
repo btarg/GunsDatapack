@@ -1,1 +1,1 @@
-execute as @s at @s if score @s current_smg_ammo < @s current_mag_max_ammo run function coolpack:gun/base/reloading/begin_reload_smg
+execute as @s if score @s current_smg_ammo < @s current_mag_max_ammo run function coolpack:gun/base/reloading/begin_reload_smg

@@ -1,4 +1,4 @@
-advancement revoke @s only coolpack:fire_events/fire_eye
+function coolpack:gun/basic_gun/revoke
 
 execute as @s if score @s current_ammo_type matches 1 run scoreboard players operation @s current_smg_ammo = @s nbt_smg_ammo
 execute as @s if score @s current_ammo_type matches 2 run scoreboard players operation @s current_rifle_ammo = @s nbt_rifle_ammo

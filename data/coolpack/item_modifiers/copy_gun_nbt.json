@@ -1,0 +1,14 @@
+{
+  "function": "minecraft:copy_nbt",
+  "source": {
+    "type": "minecraft:storage",
+    "source": "minecraft:main"
+  },
+  "ops": [
+    {
+      "source": "ender_eye",
+      "target": "{}",
+      "op": "merge"
+    }
+  ]
+}

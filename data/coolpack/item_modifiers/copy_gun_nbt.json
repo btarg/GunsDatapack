@@ -6,7 +6,7 @@
   },
   "ops": [
     {
-      "source": "ender_eye",
+      "source": "gun",
       "target": "{}",
       "op": "merge"
     }

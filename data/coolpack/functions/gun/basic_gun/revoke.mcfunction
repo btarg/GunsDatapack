@@ -1,1 +1,0 @@
-advancement revoke @s only coolpack:fire_events/fire_eye

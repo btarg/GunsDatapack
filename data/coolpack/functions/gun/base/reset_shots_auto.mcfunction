@@ -1,0 +1,1 @@
+execute at @a[nbt={SelectedItem:{tag:{gun:1b, auto:1b}}}] run scoreboard players set @p auto_shots_attempted 0

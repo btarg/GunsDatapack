@@ -12,4 +12,6 @@ execute unless data entity @s SelectedItem run function coolpack:gun/base/reload
 execute unless data entity @s SelectedItem run function coolpack:gun/base/reloading/offhand_detection/give
 
 # set the reload cooldown timer
-execute as @a store result score @s reload_timer run data get storage gun offhand.tag.reload_time
+execute as @a[scores={shots_fired=0}] store result score @s reload_timer run data get storage gun offhand.tag.reload_time
+# store the gun that we started reloading
+data modify storage gun reloading set from entity @s SelectedItem

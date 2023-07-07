@@ -1,0 +1,1 @@
+execute at @a[scores={current_burst_size=1..}] run scoreboard players set @p burst_shots_success 0

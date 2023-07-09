@@ -1,23 +1,18 @@
 # fire warped fungus based firearms
 execute as @a[nbt={SelectedItem:{tag:{gun:1b}}}] if score @s used_fungus_gun matches 1.. run function coolpack:gun/fungus_gun
+# make sure normal warped fungus sticks don't add to the scoreboard
+execute as @a[nbt=!{SelectedItem:{tag:{gun:1b}}}] if score @s used_fungus_gun matches 1.. run scoreboard players set @s used_fungus_gun 0
 
 execute at @a[nbt={SelectedItem:{}}] run scoreboard players set @p guntype 0
 execute at @a[nbt=!{SelectedItem:{}}] run scoreboard players set @p guntype 0
 
-# slow guns
-execute as @a[nbt={SelectedItem:{tag:{gun:1b, auto:0b}}}] run execute at @s if score @s shots_attempted matches 0.. run execute at @s run scoreboard players remove @s shots_attempted 1
-
-# reset shots to -1 when switching weapons
-execute at @a[nbt=!{SelectedItem:{tag:{gun:1b, slow:1b}}}] run scoreboard players set @p shots_attempted -1
-
-
 # remove ground arrows
-kill @e[type=arrow, tag=ammo, nbt={inGround:1b}]
+#kill @e[type=arrow, tag=ammo, nbt={inGround:1b}]
 
 function coolpack:gun/basic_gun/fire_tick
 
 function coolpack:timer/reload_timer
 function coolpack:ui/ammo_counter
 
-function coolpack:gun/guntypes
+function coolpack:gun/get_weapon_data
 function coolpack:timer/run_cooldowns

@@ -11,11 +11,22 @@ scoreboard players operation @s pos_y -= @e[type=area_effect_cloud,tag=ShootDire
 scoreboard players operation @s pos_z -= @e[type=area_effect_cloud,tag=ShootDirection,limit=1,sort=nearest] pos_z
 
 # fast, accurate and low damage
-execute anchored eyes positioned ^ ^ ^ if score @s guntype matches 1 run summon minecraft:arrow ~ ~ ~ {damage:1d,life:1199s,Color:-1,Tags:["ammo", "fast_ammo"],Silent:1}
-# slow and droopy but high damage
-execute anchored eyes positioned ^ ^ ^ if score @s guntype matches 2 run summon minecraft:arrow ~ ~ ~ {damage:6d,life:1199s,Color:-1,Tags:["ammo", "slow_ammo"],Silent:1}
-# DMR semi auto rounds
-execute anchored eyes positioned ^ ^ ^ if score @s guntype matches 3 run summon minecraft:arrow ~ ~ ~ {damage:3d,life:1199s,Color:-1,Tags:["ammo", "fast_ammo"],Silent:1}
+execute anchored eyes positioned ^ ^ ^ run summon minecraft:arrow ~ ~ ~ {damage:0d,life:1199s,Color:-1,Tags:["ammo_unknown"],Silent:1}
+execute store result storage gun_arrow damage double 1 run scoreboard players get @s current_damage
+data modify entity @e[limit=1, type=arrow, tag=ammo] damage set from storage gun_arrow damage
+
+tag @e[type=arrow, tag=ammo_unknown] add ammo
+execute if score @s current_is_auto matches 0 run tag @e[type=arrow, tag=ammo_unknown] add slow_ammo
+execute if score @s current_is_auto matches 1 run tag @e[type=arrow, tag=ammo_unknown] add fast_ammo
+tag @e[type=arrow, tag=ammo_unknown] remove ammo_unknown
+
+# # slow and droopy but high damage
+# execute anchored eyes positioned ^ ^ ^ if score @s guntype matches 2 run summon minecraft:arrow ~ ~ ~ {damage:6d,life:1199s,Color:-1,Tags:["ammo", "slow_ammo"],Silent:1}
+# # DMR semi auto rounds
+# execute anchored eyes positioned ^ ^ ^ if score @s guntype matches 3 run summon minecraft:arrow ~ ~ ~ {damage:3d,life:1199s,Color:-1,Tags:["ammo", "fast_ammo"],Silent:1}
+# # burst SMG
+# execute anchored eyes positioned ^ ^ ^ if score @s guntype matches 4 run summon minecraft:arrow ~ ~ ~ {damage:1d,life:1199s,Color:-1,Tags:["ammo", "fast_ammo"],Silent:1}
+
 
 execute as @s at @s run data modify storage arrow_owner_uuid uuid set from entity @s UUID
 execute as @e[type=minecraft:arrow,tag=ammo] at @s run data modify entity @s Owner set from storage arrow_owner_uuid uuid

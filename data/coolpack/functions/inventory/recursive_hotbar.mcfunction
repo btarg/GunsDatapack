@@ -15,8 +15,6 @@ execute if score @s slots_checked matches ..8 run function coolpack:inventory/re
 execute if score @s slots_checked matches 8.. run loot give @s mine 1 -64 1 minecraft:air{drop_contents: 1b}
 execute if score @s slots_checked matches 8.. run data modify block 1 -64 1 Items set from storage inventory batch.hotbar_new
 execute if score @s slots_checked matches 8.. run loot replace entity @s hotbar.0 9 mine 1 -64 1 air{drop_contents: 1b}
-execute if score @s slots_checked matches 8.. run setblock 1 -64 1 air
-execute if score @s slots_checked matches 8.. run setblock 1 -64 1 yellow_shulker_box
 
 
-execute if score @s slots_checked matches 8.. run scoreboard players set @s slots_checked 0
+#execute if score @s slots_checked matches 8.. run scoreboard players set @s slots_checked 0

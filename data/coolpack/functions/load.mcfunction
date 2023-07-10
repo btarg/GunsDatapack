@@ -35,6 +35,7 @@ scoreboard objectives add storage_has_gun_0 dummy
 scoreboard objectives add used_fungus_gun minecraft.used:minecraft.warped_fungus_on_a_stick
 
 # initialise variables
+scoreboard players set @a used_fungus_gun 0
 scoreboard players set @a shots_fired 0
 scoreboard players set @a current_smg_ammo 0
 scoreboard players set @a current_rifle_ammo 0

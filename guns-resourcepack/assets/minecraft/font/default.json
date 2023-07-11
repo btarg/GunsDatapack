@@ -1,0 +1,22 @@
+{
+    "providers":[
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/hitmarker.png",
+            "ascent": 0,
+            "height": 6,
+            "chars": [
+                "\uEff1"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/hitmarker_red.png",
+            "ascent": 1,
+            "height": 8,
+            "chars": [
+                "\uEff2"
+            ]
+        }
+    ]
+}

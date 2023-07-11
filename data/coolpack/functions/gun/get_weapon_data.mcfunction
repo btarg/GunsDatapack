@@ -14,3 +14,6 @@ execute as @a store result score @s current_burst_delay run data get entity @s S
 
 execute as @a if score @s current_ammo_type matches 1 store result score @s nbt_smg_ammo run data get entity @s SelectedItem.tag.ammo
 execute as @a if score @s current_ammo_type matches 2 store result score @s nbt_rifle_ammo run data get entity @s SelectedItem.tag.ammo
+
+# custom damage
+execute as @a[scores={current_damage=1..}] run scoreboard players operation DamageOutput Temp = @s current_damage

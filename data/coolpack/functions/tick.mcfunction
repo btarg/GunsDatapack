@@ -6,11 +6,13 @@ execute as @a[nbt=!{SelectedItem:{tag:{gun:1b}}}] if score @s used_fungus_gun ma
 execute at @a[nbt={SelectedItem:{}}] run scoreboard players set @p guntype 0
 execute at @a[nbt=!{SelectedItem:{}}] run scoreboard players set @p guntype 0
 
-# remove ground arrows
-#kill @e[type=arrow, tag=ammo, nbt={inGround:1b}]
 
 # check player's inventory for gun placeholders
 execute as @a[nbt={Inventory:[{id:"minecraft:warped_fungus_on_a_stick", tag:{REPLACE_ME:1b}}]}] run function coolpack:inventory/check_inventory
+
+
+# custom damage behaviour
+execute as @e[type=!#minecraft:arrows, nbt={ActiveEffects:[{Id:27, Amplifier:69b}]}] at @s run function coolpack:damaged
 
 function coolpack:gun/basic_gun/fire_tick
 

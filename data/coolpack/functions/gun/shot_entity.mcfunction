@@ -1,0 +1,1 @@
+advancement revoke @s only coolpack:shot_entity

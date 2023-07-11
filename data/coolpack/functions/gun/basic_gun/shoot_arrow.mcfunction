@@ -11,7 +11,7 @@ scoreboard players operation @s pos_y -= @e[type=area_effect_cloud,tag=ShootDire
 scoreboard players operation @s pos_z -= @e[type=area_effect_cloud,tag=ShootDirection,limit=1,sort=nearest] pos_z
 
 # fast, accurate and low damage
-execute anchored eyes positioned ^ ^ ^ run summon minecraft:arrow ~ ~ ~ {damage:0d,life:1199s,Color:-1,Tags:["ammo_unknown"],Silent:1, CustomPotionEffects:[{Id:27, ShowParticles:false, Duration:1, Amplifier:69}]}
+execute anchored eyes positioned ^ ^ ^ run summon minecraft:arrow ~ ~ ~ {damage:0d,life:1199s,Color:-1,Tags:["ammo_unknown"],Silent:1, CustomPotionEffects:[{Id:27, ShowParticles:false, Duration:1, Amplifier:69b}]}
 execute store result storage gun_arrow damage double 1 run scoreboard players get @s current_damage
 data modify entity @e[limit=1, type=arrow, tag=ammo_unknown] damage set from storage gun_arrow damage
 

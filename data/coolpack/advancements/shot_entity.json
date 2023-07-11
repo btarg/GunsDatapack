@@ -1,0 +1,36 @@
+{
+  "criteria": {
+    "shot_arrow": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "damage": {
+          "type": {
+            "tags": [
+              {
+                "id": "minecraft:is_projectile",
+                "expected": true
+              }
+            ],
+            "source_entity": {
+              "type": "minecraft:player",
+              "nbt": "{SelectedItem:{tag:{gun:1b}}}"
+            },
+            "direct_entity": {
+              "type": "#minecraft:arrows",
+              "nbt": "{Silent:1b}"
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "shot_arrow"
+    ]
+  ],
+  "rewards": {
+    "function": "coolpack:gun/shot_entity"
+  },
+  "sends_telemetry_event": false
+}

@@ -13,7 +13,11 @@
             ],
             "source_entity": {
               "type": "minecraft:player",
-              "nbt": "{SelectedItem:{tag:{gun:1b}}}"
+              "equipment": {
+                "mainhand": {
+                  "nbt": "{gun:1b}"
+                }
+              }
             },
             "direct_entity": {
               "type": "#minecraft:arrows",

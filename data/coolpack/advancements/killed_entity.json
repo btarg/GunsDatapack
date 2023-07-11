@@ -1,0 +1,28 @@
+{
+  "criteria": {
+    "shot_arrow": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "killing_blow": {
+          "source_entity": {
+            "type": "minecraft:player",
+            "equipment": {
+              "mainhand": {
+                "nbt": "{gun:1b}"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "shot_arrow"
+    ]
+  ],
+  "rewards": {
+    "function": "coolpack:gun/killed_entity"
+  },
+  "sends_telemetry_event": false
+}
